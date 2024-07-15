@@ -9,17 +9,12 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.Status;
 import com.w3.Qa.base.TestBase;
 import com.w3.Qa.pages.HomePage;
 import com.w3.Qa.pages.LoginPage;
-import com.w3.Qa.utility.RerunFailedTestCase;
 import com.w3.Qa.utility.TakeScreenShot;
 
-import jdk.internal.org.jline.utils.Log;
-
 public class HomePageTest extends TestBase {
-	
 	HomePage homepage;
 	LoginPage loginpage;
 	
@@ -69,7 +64,7 @@ public class HomePageTest extends TestBase {
 		TestBase.printStatus("WARNING","Table verified successfully");
 	}
 	
-	@Test(retryAnalyzer = RerunFailedTestCase.class)
+	@Test()
 	public void verifyAssert1() throws IOException {
 		TestBase.reportsDetails("sanity","verifyAssert1");
 		try {
@@ -84,7 +79,7 @@ public class HomePageTest extends TestBase {
 		}
 	}
 	
-	@Test(retryAnalyzer = RerunFailedTestCase.class)
+	@Test()
 	public void verifyAssert2() throws IOException {
 		TestBase.reportsDetails("sanity","verifyAssert2");
 		Assert.assertEquals(1, 2);
