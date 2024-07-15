@@ -11,7 +11,12 @@
 	<name>Selenium</name>
 	<url>http://maven.apache.org</url>
 	
-	<build>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+		<build>
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -25,10 +30,6 @@
         </plugin>
     </plugins>
 </build>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
 
 	<dependencies>
 		<dependency>
