@@ -10,6 +10,21 @@
 
 	<name>Selenium</name>
 	<url>http://maven.apache.org</url>
+	
+	<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <excludes>
+                    <exclude>com.w3.Qa.utility/RerunFailedTestCase.java</exclude>
+                    <!-- Add more <exclude> entries as needed -->
+                </excludes>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
